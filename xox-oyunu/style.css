@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --back-color: #4545a5;
+    --xox-color: #a8b8a8;
+    --win-color: #83ff67;
+}
+
+body{
+    font-size: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: linear-gradient(to right, #058,#a50);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    max-width: 50rem;
+    width: 26rem;
+    background-color: var(--back-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+h1{
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #6b4;
+    letter-spacing: 2px;
+}
+.game-board{
+    display: grid;
+    grid-template-columns: repeat(3, 6rem);
+    grid-gap: 1rem;
+    margin-bottom: 1rem;
+}
+.cell{
+    width: 6rem;
+    height: 6rem;
+    font-size: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--xox-color);
+    transition: 300ms all ease-out;
+    background-color: var(--xox-color);
+    color: #222;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.cell:hover{
+    opacity: 0.9;
+}
+.cell:active{
+    transform: scale(1.02);
+}
+.restart{
+    font-size: 2rem;
+    padding: 8px 1.2rem;
+    border-radius: 4px;
+    background-color: #6b4;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+}
+.restart:active{
+    transform: scale(0.95);
+}
+
+.message{
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    font-family: cursive;
+    font-weight: bold;
+}
+.win{
+    background-color: var(--win-color);
+    color: #fff;
+}
